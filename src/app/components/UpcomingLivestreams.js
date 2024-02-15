@@ -18,7 +18,7 @@ export const UpcomingLivestreams = async () => {
       <div className="card-body">
         <h2 className="card-title">Upcoming Livestreams</h2>
         <div className="divider" />
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {data.map((video, index) => (
             <UpcomingLivestreamCard video={video} key={index} />
           ))}
