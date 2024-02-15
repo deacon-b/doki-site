@@ -1,3 +1,5 @@
+import { UpcomingLivestreamCard } from "./UpcomingLivestreamCard";
+
 export const UpcomingLivestreams = async () => {
   const res = await fetch(
     "https://holodex.net/api/v2/videos?channel_id=UComInW10MkHJs-_vi4rHQCQ&type=stream,placeholder&status=upcoming&sort=available_at&order=asc&limit=5",
@@ -21,16 +23,6 @@ export const UpcomingLivestreams = async () => {
             <UpcomingLivestreamCard video={video} key={index} />
           ))}
         </div>
-      </div>
-    </div>
-  );
-};
-const UpcomingLivestreamCard = ({ video, ...props }) => {
-  return (
-    <div className="card bg-base-100 shadow-xl w-42 text-base-content" {...props}>
-      <div className="card-body">
-        <h2 className="card-title text-sm">{video.title}</h2>
-        <p>{new Date(video.available_at).toLocaleString()} 📅</p>
       </div>
     </div>
   );
