@@ -15,6 +15,7 @@ export const Stats = ({data}) => {
           "Content-Type": "application/json",
         },
       });
+      if (res.headers.get("Content-Type") !== "application/json") return
       const data = await res.json();
       setDataState(data);
     }, 5000);
