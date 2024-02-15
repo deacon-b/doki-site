@@ -12,7 +12,7 @@ export default function Home() {
       backgroundSize: "320px",
       backgroundAttachment: "fixed",
       // background image and linear gradient dark to light
-      backgroundImage: "linear-gradient(rgba(0,0,0,0.3), rgba(255, 255, 130,0.1)), url('checkered.png')",
+      backgroundImage: "url('checkered.png')",
       // angle the background
     }}
     >
