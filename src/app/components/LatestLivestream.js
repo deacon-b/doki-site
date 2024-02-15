@@ -1,19 +1,7 @@
-'use client';
+"use client";
 import Image from "next/image";
 
-export const LatestLivestream = async () => {
-  const res = await fetch(
-    "https://holodex.net/api/v2/videos?channel_id=UComInW10MkHJs-_vi4rHQCQ&type=stream&status=live,past&limit=1",
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "X-APIKEY": process.env.HOLODEX_API_KEY,
-      },
-    }
-  );
-  const data = await res.json();
-  const video = data[0];
+export const LatestLivestream = async ({video}) => {
   return (
     <div className="card bg-base-100 shadow-xl image-full">
       <figure>
