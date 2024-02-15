@@ -28,9 +28,7 @@ export const LatestLivestream = async () => {
         <p>
           {video.status === "live"
             ? "Live now 🔴"
-            : `Streamed at ${new Date(video.available_at).toLocaleString(
-              "en-US"
-            )} 📅`}
+            : `Streamed at ${new Date(video.available_at).toLocaleString()} 📅`}
         </p>
         <div className="card-actions justify-end">
           <a
