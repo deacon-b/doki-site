@@ -2,7 +2,7 @@ const AnimatedDigit = ({ index, ...props }) => {
   const numbers = [...Array(10).keys()];
 
   return (
-    <div className="h-9 overflow-hidden">
+    <div className="h-9 overflow-hidden" {...props}>
       <div
         style={{
           display: "flex",

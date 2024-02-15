@@ -3,19 +3,8 @@ import { LatestLivestream } from "./components/LatestLivestream";
 import { SocialsCard } from "./components/SocialsCard";
 import { InfoCard } from "./components/InfoCard";
 
-export default async function Home() {
-  const res = await fetch(
-    "https://holodex.net/api/v2/videos?channel_id=UComInW10MkHJs-_vi4rHQCQ&type=stream&status=live,past&limit=1",
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "X-APIKEY": process.env.HOLODEX_API_KEY,
-      },
-    }
-  );
-  const data = await res.json();
-  const video = data[0];
+export default function Home() {
+  // fetch form https://holodex.net/api/v2/live
   return (
     <main className="flex flex-col w-full min-h-screen justify-center lg:items-center gap-3 p-3"
     // add checkered.png as background pattern
@@ -34,7 +23,7 @@ export default async function Home() {
             <SocialsCard />
           </div>
           <div className="flex flex-col gap-3">
-            <LatestLivestream video={video}/>
+            <LatestLivestream />
             <UpcomingLivestreams />
           </div>
         </section>
