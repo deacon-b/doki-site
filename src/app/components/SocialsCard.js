@@ -1,6 +1,6 @@
 export const SocialsCard = () => {
   return (
-    <div className="card bg-neutral text-neutral-content lg:flex-1">
+    <div className="card bg-neutral text-neutral-content">
       <div className="card-body items-center text-center">
         <h2 className="card-title">Social Medias</h2>
         <div className="divider m-2" />
