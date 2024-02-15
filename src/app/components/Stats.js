@@ -14,6 +14,7 @@ export const Stats = ({data}) => {
         headers: {
           "Content-Type": "application/json",
         },
+        cache: "no-cache",
       });
       if (res.headers.get("Content-Type") !== "application/json") return
       const data = await res.json();
