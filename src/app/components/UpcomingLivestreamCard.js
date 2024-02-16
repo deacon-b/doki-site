@@ -12,7 +12,7 @@ export const UpcomingLivestreamCard = ({ video, ...props }) => {
 
   useEffect(() => {
     const date = new Date(video.available_at);
-    setStreamDay(date.getDay());
+    setStreamDay(date.getDate());
     setStreamMonth(date.getMonth());
     setStreamYear(date.getFullYear());
     setStreamTime(date.toLocaleTimeString([], {timeStyle: 'short'}))
