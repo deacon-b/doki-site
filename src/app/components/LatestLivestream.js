@@ -17,10 +17,10 @@ export const LatestLivestream = async () => {
   const previewImg = `https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`
   
   return (
-    <div style={{'--image-url': `url(${previewImg})`}} 
-        className="card bg-base-100 min-h-96 bg-[image:var(--image-url)] bg-cover backdrop-brightness-50">
+    <div style={{'--image-url': `url(${previewImg})`, 'background-size': `auto 105%`}} 
+        className="card bg-base-100 min-h-96 bg-[image:var(--image-url)] bg-origin-border bg-center backdrop-brightness-50">
       <div className='card-body backdrop-brightness-75'>
-        <h2 className="card-title">{video.title}</h2>
+        <h2 className="font-bold w-4/5 text-nowrap truncate text-xl">{video.title} </h2>
         <VideoStatus video={video} />
         <div className="card-actions justify-end">
           <a href={`https://www.youtube.com/watch?v=${video.id}`} className="btn btn-accent">

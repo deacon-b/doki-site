@@ -39,7 +39,7 @@ export const UpcomingLivestreamCard = ({ video, ...props }) => {
           {monthNames[streamMonth]} {streamDay}
         </p>
 
-        <p className="absolute -rotate-[20deg] right-1 top-11 font-black text-4xl mix-blend-hard-light">
+        <p className="absolute -rotate-[20deg] right-1 top-8 font-black text-4xl mix-blend-hard-light">
           {streamTime}
         </p>
       </div>
