@@ -8,7 +8,7 @@ export const UpcomingLivestreamCard = ({ video, ...props }) => {
   const [streamYear, setStreamYear] = useState(0);
   const [streamTime, setStreamTime] = useState("");
 
-  var monthNames = ["JAN", "FEB", "Mar", "Apr", "May","June","July", "Aug", "Sep", "Oct", "Nov","Dec"];
+  var monthNames = ["JAN", "FEB", "MAR", "APR", "MAY","JUNE","JULY", "AUG", "SEP", "OCT", "NOV","DEC"];
 
   useEffect(() => {
     const date = new Date(video.available_at);
