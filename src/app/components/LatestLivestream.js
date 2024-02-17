@@ -18,7 +18,7 @@ export const LatestLivestream = async () => {
   
   return (
     <div style={{'--image-url': `url(${previewImg})`, 'background-size': 'cover'}} 
-        className="card bg-neutral min-h-96 bg-[image:var(--image-url)] bg-origin-border bg-center backdrop-brightness-50">
+        className="card bg-neutral min-h-96 bg-[image:var(--image-url)] bg-center">
       <div className='card-body backdrop-brightness-50 text-neutral-content'>
         <h2 className="font-bold w-4/5 text-nowrap truncate text-xl">{video.title} </h2>
         <VideoStatus video={video} />
