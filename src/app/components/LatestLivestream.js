@@ -15,7 +15,7 @@ export const LatestLivestream = async () => {
   const data = await res.json();
   const video = data[0];
   return (
-    <div className="card bg-base-100 shadow-xl image-full">
+    <div className="card bg-black shadow-xl image-full">
       <figure>
         <Image
           src={`https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`}
