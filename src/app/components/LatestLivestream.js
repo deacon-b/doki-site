@@ -14,16 +14,25 @@ export const LatestLivestream = async () => {
   );
   const data = await res.json();
   const video = data[0];
-  const previewImg = `https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`
-  
   return (
-    <div style={{'--image-url': `url(${previewImg})`, 'background-size': 'cover'}} 
-        className="card bg-neutral min-h-96 bg-[image:var(--image-url)] bg-center overflow-hidden">
-      <div className='card-body backdrop-brightness-50 text-neutral-content'>
-        <h2 className="font-bold w-4/5 text-nowrap truncate text-xl">{video.title} </h2>
+    <div className="card bg-base-100 shadow-xl image-full">
+      <figure>
+        <Image
+          src={`https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`}
+          alt="Dokibird"
+          className="object-cover w-full"
+          width={640}
+          height={360}
+        />
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title">{video.title}</h2>
         <VideoStatus video={video} />
         <div className="card-actions justify-end">
-          <a href={`https://www.youtube.com/watch?v=${video.id}`} className="btn btn-accent">
+          <a
+            href={`https://www.youtube.com/watch?v=${video.id}`}
+            className="btn btn-accent"
+          >
             Watch now
           </a>
         </div>
@@ -31,5 +40,4 @@ export const LatestLivestream = async () => {
     </div>
   );
 };
-
 
