@@ -18,11 +18,11 @@ export default function Home() {
     >
       <div className="flex flex-col gap-3">
         <section className="flex flex-col lg:flex-row gap-3 lg:items-stretch">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col flex-1 gap-3">
             <InfoCard />
             <SocialsCard />
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col flex-1 gap-3">
             <LatestLivestream />
             <UpcomingLivestreams />
           </div>
