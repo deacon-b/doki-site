@@ -2,7 +2,7 @@ import { UpcomingLivestreamCard } from "./UpcomingLivestreamCard";
 
 export const UpcomingLivestreams = async () => {
   const res = await fetch(
-    "https://holodex.net/api/v2/videos?channel_id=UComInW10MkHJs-_vi4rHQCQ&type=stream,placeholder&status=upcoming&sort=available_at&order=asc&limit=5",
+    "https://holodex.net/api/v2/videos?channel_id=UComInW10MkHJs-_vi4rHQCQ&type=stream,placeholder&status=upcoming&sort=available_at&order=asc",
     {
       method: "GET",
       headers: {
