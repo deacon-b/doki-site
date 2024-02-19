@@ -22,7 +22,7 @@ const AnimatedDigit = ({ index, ...props }) => {
 };
 
 export const AnimatedNumbers = ({ number, separators = ",", ...props }) => {
-  const numbers = number.toLocaleString().split("");
+  const numbers = number.toLocaleString('en-US').split("");
   // use AnimatedDigit, separated by commas
   return (
     <div className="flex-row flex-wrap inline-flex justify-center items-center" {...props}>
