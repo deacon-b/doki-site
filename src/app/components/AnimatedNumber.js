@@ -25,7 +25,7 @@ export const AnimatedNumbers = ({ number, separators = ",", ...props }) => {
   const numbers = number.toLocaleString().split("");
   // use AnimatedDigit, separated by commas
   return (
-    <div className="flex-row flex-wrap inline-flex justify-center items-center">
+    <div className="flex-row flex-wrap inline-flex justify-center items-center" {...props}>
       {numbers.map((number, i) => (
         <>
           {number != "," ? (

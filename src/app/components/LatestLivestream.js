@@ -3,7 +3,7 @@ import { VideoStatus } from "./VideoStatus";
 
 export const LatestLivestream = async () => {
   const res = await fetch(
-    "https://holodex.net/api/v2/videos?channel_id=UComInW10MkHJs-_vi4rHQCQ&type=stream&status=live,past&limit=1",
+    "https://holodex.net/api/v2/videos?channel_id=UComInW10MkHJs-_vi4rHQCQ&type=stream&status=live,past&limit=10",
     {
       method: "GET",
       headers: {
@@ -13,9 +13,10 @@ export const LatestLivestream = async () => {
     }
   );
   const data = await res.json();
-  const video = data[0];
+  const video = data.find((video) => video.topic_id !== "shorts");
   return (
-    <div className="card bg-black shadow-xl image-full">
+    <div className="card bg-black shadow-xl image-full w-full lg:max-w-[640px] h-[360px] flex-shrink"
+    >
       <figure>
         <Image
           src={`https://i.ytimg.com/vi/${video.id}/maxresdefault.jpg`}
