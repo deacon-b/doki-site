@@ -20,8 +20,8 @@ export const UpcomingLivestreamCard = ({ video, ...props }) => {
   };
 
   const addEventToCalendar = (title, description, startDateTime, endDateTime) => {
-    // Construct the calendar event in iCalendar format
-    const calendarEvent = `BEGIN:VCALENDAR
+  // Construct the calendar event in iCalendar format
+  const calendarEvent = `BEGIN:VCALENDAR
 VERSION:2.0
 BEGIN:VEVENT
 SUMMARY:${title}
@@ -31,13 +31,16 @@ DTEND:${endDateTime}
 END:VEVENT
 END:VCALENDAR`;
 
-    // Convert the calendar event to a data URI
-    const calendarURL = 'data:text/calendar;charset=utf8,' + encodeURIComponent(calendarEvent);
+  // Create a Blob object with the calendar event content
+  const blob = new Blob([calendarEvent], { type: 'text/calendar' });
 
-    // Open the calendar URL in a new tab/window
-    window.open(calendarURL, '_blank');
-  };
+  // Create a URL for the Blob object
+  const url = URL.createObjectURL(blob);
 
+  // Open the calendar URL using the webcal protocol to open the calendar application
+  window.open('webcal://' + url);
+};
+  
   return (
     <div className="card bg-base-100 shadow-xl w-42 text-base-content" {...props} onClick={addToCalendar}>
       <div className="card-body">
