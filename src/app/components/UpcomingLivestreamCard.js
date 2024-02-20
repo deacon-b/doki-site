@@ -12,7 +12,7 @@ export const UpcomingLivestreamCard = ({ video, ...props }) => {
 
   const addToCalendar = () => {
     const title = video.title;
-    const description = "Livestream with " + video.channel_name;
+    const description = "Livestream with " + video.channel.name;
     const startDateTime = video.available_at; // Assuming this is in ISO format
     const endDateTime = ""; // You can calculate end time based on duration if available
 
